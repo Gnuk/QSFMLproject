@@ -35,7 +35,7 @@ namespace qsfml {
         /**
          * @brief Tell whether the SFML window has been initialized or not
          */
-        bool   myInitialized;
+        bool myInitialized;
     public :
 
         /**

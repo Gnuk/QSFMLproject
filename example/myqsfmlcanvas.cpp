@@ -18,14 +18,21 @@ MyQSFMLCanvas::MyQSFMLCanvas(QWidget* parent, const QPoint& position, const QSiz
     this->movement = 5;
 }
 
-void MyQSFMLCanvas::OnInit(){
+MyQSFMLCanvas::~MyQSFMLCanvas()
+{
+    // My destructor
+}
+
+void MyQSFMLCanvas::OnInit()
+{
     // Example of a rectangle
     this->rect.setSize(sf::Vector2f(100, 50));
     this->rect.setPosition(sf::Vector2f(350, 275));
     this->rect.setFillColor(sf::Color::Blue);
 }
 
-void MyQSFMLCanvas::OnUpdate(){
+void MyQSFMLCanvas::OnUpdate()
+{
     // Show the rectangle
     this->clear();
     this->draw(this->rect);
@@ -38,9 +45,11 @@ void MyQSFMLCanvas::mousePressEvent ( QMouseEvent * )
     this->rect.setFillColor(sf::Color::Red);
 }
 
-void MyQSFMLCanvas::keyPressEvent(QKeyEvent *event){
+void MyQSFMLCanvas::keyPressEvent(QKeyEvent *event)
+{
     // Move the rectangle
-    switch (event->key()) {
+    switch (event->key())
+    {
         case Qt::Key_Left:
             this->rect.move(-(this->movement),0);
             break;

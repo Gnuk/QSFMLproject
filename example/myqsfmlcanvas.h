@@ -35,6 +35,11 @@ namespace example{
          * @param size Size of the Canvas
          */
         MyQSFMLCanvas(QWidget* parent, const QPoint& position, const QSize& size);
+
+        /**
+          * Destructor
+          */
+        ~MyQSFMLCanvas();
     private:
         /**
          * @brief What we do when SFML is initialized
